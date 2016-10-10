@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Japanese Name Tools by vigov5</title>
+    <script src="jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="unidecode.min.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+    table,
+    textarea {
+        width: 100%;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    fieldset {
+      width: 20%;
+    }
+    </style>
+</head>
+
+<body>
+  <h1>Japanese Name Tools</h1>
+  <h3>by <a href="https://github.com/vigov5/">@vigov5</a></h3>
+  <fieldset>
+    <legend>Options for English</legend>
+    <input type="radio" name="opts" value="lower">All lowercase<br>
+    <input type="radio" name="opts" value="capital">Capital first letter<br>
+    <input type="radio" name="opts" value="upper">All uppercase
+  </fieldset>
+  <br />
+  <input type="button" id="convert" value="Convert"></input>
+  <table>
+    <th>Vietnamese</th>
+    <th>Katakana</th>
+    <th>English</th>
+    <tr>
+      <td>
+          <textarea name="vi" id="vi" rows="30">Nguyễn Văn Tài</textarea>
+      </td>
+      <td>
+          <textarea name="jp" id="jp" rows="30"></textarea>
+      </td>
+      <td>
+          <textarea name="en" id="en" rows="30"></textarea>
+      </td>
+    </tr>
+  </table>
+  <script>
+    $("#convert").click(function(event) {
+      var raw = $("#vi").val().trim();
+      var opts = $("input[name=opts]:checked").val();
+      if (raw === "") return;
+      else
+      {
+        var resultEn = raw.unidecode();
+        switch(opts) {
+          case "upper":
+            resultEn = resultEn.toUpperCase();
+            break;
+          case "lower":
+            resultEn = resultEn.toLowerCase();
+            break;
+          case "capital":
+            resultEn = $.map(resultEn.toLowerCase().split("\n"), function(name){
+              return name.trim().split(" ").map(function(value) {
+                return value[0].toUpperCase() + value.slice(1);
+              }).join(" ");
+            }).join("\n");
+            break;
+          case undefined:
+            break;
+        }
+        $("#en").val(resultEn);
+        var resultJp = raw.unidecode().toUpperCase();
+        for (index in mapping) {
+          resultJp = resultJp.replace(new RegExp(mapping[index][0], 'g'), mapping[index][1]);
+        }
+        $("#jp").val(resultJp);
+      }
+    });
+  </script>
+</body>
+
+</html>
