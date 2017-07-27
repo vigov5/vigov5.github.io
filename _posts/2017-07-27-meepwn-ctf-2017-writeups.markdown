@@ -2,7 +2,7 @@
 layout: post
 title:  "Meepwn CTF 2017 - Quick TSULOTT and |\\/|/-\\T|-| writeup"
 date: 2017-07-27 11:08:19 +0700
-categories: security, ctf
+categories: ctf
 ---
 
 # TSULOTT
