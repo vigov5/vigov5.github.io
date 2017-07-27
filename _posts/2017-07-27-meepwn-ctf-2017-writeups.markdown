@@ -144,7 +144,7 @@ I hack your brain!
 hack.py
 ```
 
-```
+```python
 from Crypto.Util.number import *
 from hashlib import md5
 
