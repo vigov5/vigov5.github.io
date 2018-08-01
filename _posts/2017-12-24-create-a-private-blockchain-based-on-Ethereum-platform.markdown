@@ -2,7 +2,7 @@
 layout: post
 title:  "Create a private blockchain based on Ethereum platform"
 date: 2017-12-24 15:39:00 +0700
-categories: blockchain
+categories: blockchain ethereum
 ---
 
 X-post: [https://viblo.asia/p/tu-thiet-lap-private-blockchain-dua-tren-nen-tang-ethereum-RQqKLg0457z](https://viblo.asia/p/tu-thiet-lap-private-blockchain-dua-tren-nen-tang-ethereum-RQqKLg0457z)
@@ -12,6 +12,8 @@ X-post: [https://viblo.asia/p/tu-thiet-lap-private-blockchain-dua-tren-nen-tang-
 
 Gần đây thì Bitcoin, công nghệ blockchain, Ethereum, smart contract đã trở thành chủ đề trên rất nhiều các diễn đàn cũng như các trang báo, và bạn bắt đầu tự hỏi chúng là gì, có gì hay ho mà nhiều người chú ý đến như vậy.
 Với mình, thay vì lý thuyết khô khan, tôi thích đi vào tìm hiểu hands-on trước, sau đó mới quay lại đọc lý thuyết :sweat_smile:. Bởi vậy trong bài này, mình muốn chia sẻ cách thiết lập một private blockchain trên nền tảng Ethereum qua những gì mình tìm hiểu được, xây dựng môi trường để ta có thể phát triển các smart contract sau này :ok_hand:
+
+<!--description-->
 
 # Thiết lập private blockchain
 

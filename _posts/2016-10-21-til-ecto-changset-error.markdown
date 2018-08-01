@@ -2,13 +2,15 @@
 layout: post
 title:  "[TIL] Ecto changset errors"
 date: 2016-10-21 14:08:00 +0700
-categories: ecto
+categories: ecto elixir
 ---
 
 Ở Controller ta có
 {% highlight elixir %}
 changeset = Ecto.Changeset.add_error(changeset, :email, "Email doesn't exist in DB. Please contact admin")
 {% endhighlight %}
+
+<!--description-->
 
 Còn ở view:
 

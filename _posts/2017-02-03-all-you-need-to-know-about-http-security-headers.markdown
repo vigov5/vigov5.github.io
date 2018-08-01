@@ -2,7 +2,7 @@
 layout: post
 title:  "Tất cả những thứ bạn cần biết về HTTP security headers"
 date: 2017-02-03 12:34:56 +0700
-categories: security
+categories: security web
 ---
 
 X-post: [https://viblo.asia/vigov5/posts/mDYGDPLVGpx](https://viblo.asia/vigov5/posts/mDYGDPLVGpx)
@@ -27,6 +27,8 @@ Vary: Accept-Encoding
 ```
 Chắc hẳn chúng ta đã không ít lần nhìn thấy những HTTP security headers ví dụ như `X-XSS-Protection` hay `X-Frame-Options` ở trên và tự hỏi chúng có tác dụng gì ?
 Bài viết này dịch và tổng hợp từ bài gốc tại [đây](https://blog.appcanary.com/2017/http-security-headers.html) hi vọng sẽ đem đến cho mọi người những kiến thức cơ bản nhất về chúng để có thể sử dụng hiệu quả và đúng cách.
+
+<!--description-->
 
 # HTTP Security Headers
 ## X-XSS-Protection

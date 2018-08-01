@@ -13,6 +13,8 @@ Who Wants to Be a Millionaire? Join My LOTT and Win JACKPOTTTT!!! Remote: 128.19
 
 Truy cập vào trang, ta thấy một trang web xổ số, tìm ra 6 cặp số đúng đẻ trúng cả tỉ đồng.
 
+<!--description-->
+
 View source thấy có comment: `is_debug=1`, thử thêm tham số này ta nhận được source-code như sau:
 
 ```php

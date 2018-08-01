@@ -2,7 +2,7 @@
 layout: post
 title:  "[TIL] Elixir with triangle-numbers"
 date: 2016-10-14 09:59:26 +0700
-categories: elixir
+categories: elixir til
 ---
 (Đúng ra phải là **YIL** - *yesterday I learn*, nhưng thôi kệ vậy)
 
@@ -12,6 +12,8 @@ Yêu cầu: cho một số `x`, viết function in ra mảng sau:
 {% endhighlight %}
 
 Mảng con cuối cùng sẽ có chiều dài là `x`. Và đây là code python ban đầu của mình. Khá cùi bắp:
+
+<!--description-->
 
 {% highlight python %}
 result = []
