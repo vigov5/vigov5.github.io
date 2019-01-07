@@ -7,22 +7,56 @@
 
 # Site settings
 title: My little space
-email: nguyenanhtien2210@gmail.com
-description: >
-  My little space for all kind of music, thought, code, TIL, game, misc..
-url: "http://tienna.tk" # the base hostname & protocol for your site
-twitter_username: vigov5
-github_username:  vigov5
+description: "My little space for all kind of music, thought, code, TIL, game, misc.."
+url: "http://tienna.tk"
+author: Nguyen Anh Tien
+github: https://github.com/vigov5.github.io
+about: I'm a monkey coder who trying to be more creative.
+disqus_shortname: ""
+google_analytics: UA-XXXXXXXX-Y
+avatar_url: /static/img/avatar.png
 
-# Build settings
+enableTags: true
+tagarray: []
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-facebook
+      link: "https://facebook.com/vigov5"
+    - icon: fa-twitter
+      link: "https://twitter.com/vigov5"
+    - icon: fa-linkedin
+      link: "https://vn.linkedin.com/in/nguyen-anh-tien-751070132"
+    - icon: fa-github
+      link: "https://github.com/vigov5"
+
+share:
+  twitter_username: vigov5
+
+urls:
+    - text: About Me
+      url: /about/
+    - text: My Projects
+      url: /projects/
+    - text: XML Feed
+      url: /feed.xml
+
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
 markdown: kramdown
-kramdown:
-  input: GFM
+gems:
+  - jekyll-paginate
+  - jekyll-gist
 
-# Third-party services
-# just leave someone empty to disable it
-# google_analytics:
-disqus_shortname:
-
-# used this for post_excerpt at index_page
-excerpt_separator: <!--description-->
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']

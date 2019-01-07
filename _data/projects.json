@@ -1,0 +1,74 @@
+[
+	{
+		"slug": "blokus-game",
+		"name": "Blokus Game",
+		"image": "blokus.png",
+		"url": "https://blokus.heasygame.com/",
+		"date": "Oct 2018",
+		"tags": ["Elixir", "Multiplayer", "Game"]
+	},
+	{
+		"slug": "matrix-game",
+		"name": "Matrix Game",
+		"image": "matrix.png",
+		"url": "https://matrix.heasygame.com/",
+		"date": "Jul 2018",
+		"tags": ["Elixir", "Multiplayer", "Game"]
+	},
+	{
+		"slug": "image-spinner",
+		"name": "Image Spinner",
+		"image": "spinner.png",
+		"url": "https://ctf-games.surge.sh/spinner.html",
+		"date": "Feb 2018",
+		"tags": ["Javascript", "PhaserJS", "Game"]
+	},
+	{
+		"slug": "drive-expose-checker",
+		"name": "Drive File Expose Checker",
+		"image": "drive.png",
+		"url": "https://drive-expose-checker.surge.sh/",
+		"date": "Dec 2017",
+		"tags": ["Javascript", "Google Drive", "Tool"]
+	},
+	{
+		"slug": "sushi-me",
+		"name": "Sushi Me",
+		"image": "sushi_me.png",
+		"url": "/sushi_me",
+		"date": "Dec 2016",
+		"tags": ["Javascript", "PhaserJS", "Game"]
+	},
+	{
+		"slug": "cephalopod",
+		"name": "Cephalopod",
+		"image": "cephalopod.png",
+		"url": "https://cephalopod.surge.sh/",
+		"date": "Oct 2016",
+		"tags": ["Haxe", "HaxeFlixel", "Game"]
+	},
+	{
+		"slug": "wereworf",
+		"name": "Wereworf BroadGame App",
+		"image": "werewolf.png",
+		"url": "https://werewolf.surge.sh/",
+		"date": "Jun 2016",
+		"tags": ["Haxe", "HaxeFlixel", "Game"]
+	},
+	{
+		"slug": "kana-converter",
+		"name": "Kana Converter",
+		"image": "kana.png",
+		"url": "/kana_converter",
+		"date": "Jan 2016",
+		"tags": ["Javascript", "Japanese", "Tool"]
+	},
+	{
+		"slug": "python-mario",
+		"name": "PyMario",
+		"image": "mario.jpg",
+		"url": "https://github.com/vigov5/mario_game",
+		"date": "Apr 2014",
+		"tags": ["Python", "Pygame", "Game"]
+	}
+]

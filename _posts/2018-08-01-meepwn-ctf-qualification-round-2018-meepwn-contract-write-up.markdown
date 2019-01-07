@@ -177,5 +177,5 @@ Việc còn lại là thực hiện `submitInstance` và chờ mail flag về:
 ![](https://images.viblo.asia/24d169be-0e35-4eb1-8c0c-c715b9ed1b46.png)
 
 # References
-- https://viblo.asia/s/blockchain-smart-contract-Am5yq0mq5db
-- http://solidity.readthedocs.io/en/v0.4.24/
+- <https://viblo.asia/s/blockchain-smart-contract-Am5yq0mq5db>
+- <http://solidity.readthedocs.io/en/v0.4.24/>

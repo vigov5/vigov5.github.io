@@ -272,6 +272,6 @@ Kiểm tra tài khoản:
 Chúng ta đã thiết lập thành công private blockchain trên localhost, tiến hành một số giao dịch cơ bản. Ở các bài sau ta sẽ tìm hiểu thêm về Ethereum, cơ chế hoạt động, Solidity, smart contract, cách phát hành token của chính mình. Stay tune !
 
 # Tham khảo
-- https://medium.facilelogin.com/build-your-own-blockchain-b8eaeea2f891
-- https://medium.facilelogin.com/the-mystery-behind-block-time-63351e35603a
-- https://blog.ethereum.org/2015/12/03/how-to-build-your-own-cryptocurrency/
+- <https://medium.facilelogin.com/build-your-own-blockchain-b8eaeea2f891>
+- <https://medium.facilelogin.com/the-mystery-behind-block-time-63351e35603a>
+- <https://blog.ethereum.org/2015/12/03/how-to-build-your-own-cryptocurrency/>

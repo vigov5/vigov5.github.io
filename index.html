@@ -1,60 +1,45 @@
 ---
 layout: default
-title: Home
 ---
 
-<div class="home">
-  <div class="post-list">
+<div id="home">
+  <h1>{{ site.title }}</h1>
+  <hr />
 
-    {% for post in site.posts limit:5%}
-
-    <article class="post_card post">
-      <header class="post_header">
-        <h2 class="post_title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a></h2>
-        <time class="post_date">{{ post.date | date: "%d %B %Y, %A" }}</time>
-      </header>
-      <div class="post_excerpt">
-        <p>
-          {% if post.description %}
-          {{ post.description}}
-          {% else %}
-          {{ post.excerpt }}
-          {% endif %}
-        </p>
-      </div>
-      <footer class="post_meta">
-
-
-        {% if post.location %}
-        <span class="author-location">
-          <div data-icon="ei-location"></div>
-          <a href="https://www.google.com/maps/place/{{post.location}}">{{ post.location }}</a>
-        </span>
-        {% endif %}
-
-        {% for category in post.categories %}
-        <a href="{{"/category/" | append: category | prepend: site.baseurl }}">
-          <data data-icon="ei-archive"></data>
-          {{category}}</a>
-        {% endfor %}
-
-        <!--
-        {% if post.author %}
-        <span class="author_meta">
-          <img src="{{site.baseurl}}/assets/img/{{post.author}}.jpg"></img>
-          <span>David Lin</span>
-        </span>
-        {% endif %}
-        -->
-
-        <p class="readmore">
-          <a href="{{ post.url | prepend: site.baseurl }}"><data data-icon="ei-arrow-right"></data>Read this article  </a>
-        </p>
-      </footer>
-      <hr/>
-    </article>
+  <ol class="posts">
+    {% for post in paginator.posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li>
     {% endfor %}
+  </ol>
 
-    <div class="pagination older-post"><a href="./archive"><data data-icon="ei-arrow-right"></data> Archive  </a></div>
-  </div>
-</div>
+  <!-- Pagination links -->
+  {% if paginator.total_pages > 1 %}
+    <ul class="pagination pagination-sm">
+      {% if paginator.previous_page %}
+        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+      {% else %}
+        <li class="disabled"><span aria-hidden="true">&laquo;</span></li>
+      {% endif %}
+
+      <li><a href="/">First</a></li>
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <li class="active"><a>{{ page }}<span class="sr-only">(current)</span></a></li>
+        {% elsif page == 1 %}
+          <li><a href="/">{{ page }}</a></li>
+        {% else %}
+          <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+        {% endif %}
+      {% endfor %}
+
+      <li><a href="/page/{{ paginator.total_pages }}/">Last</a></li>
+
+      {% if paginator.next_page %}
+        <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
+      {% else %}
+        <li class="disabled"><span>&raquo;</span></li>
+      {% endif %}
+    </ul>
+  {% endif %}
+</div><!-- end #home -->
