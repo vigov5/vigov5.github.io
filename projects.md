@@ -4,4 +4,4 @@ title: Projects
 permalink: /projects/
 ---
 
-Few of my projects, tools, etc... (dead or alive)
+Few of my (public) projects, tools, etc... (dead or alive)
