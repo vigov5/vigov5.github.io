@@ -13,7 +13,7 @@ author: Nguyen Anh Tien
 github: https://github.com/vigov5.github.io
 about: I'm a monkey coder who trying to be more creative.
 disqus_shortname: ""
-google_analytics: UA-XXXXXXXX-Y
+google_analytics: UA-66977265-6
 avatar_url: /static/img/avatar.png
 
 enableTags: true
@@ -60,3 +60,7 @@ compress_html:
   endings: all
   ignore:
     envs: ['development']
+
+sass:
+  style: compressed
+  sass_dir: _sass
