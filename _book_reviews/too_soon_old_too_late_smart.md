@@ -12,7 +12,7 @@ format: Ebook
 book-link: https://www.amazon.com/gp/product/1569244197
 cover: too_soon_old_too_late_smart.jpg
 date: 2019-01-07
-excerpt: "Một quyển sách với những góc nhìn và triết lý của một bác sĩ tâm lý về nhiều mặt của cuộc sống"
+excerpt: Một quyển sách với những góc nhìn và triết lý của một bác sĩ tâm lý về nhiều mặt của cuộc sống
 ---
 Bản dịch: [*Già Quá Sớm, Khôn Quá Muộn - Ba Mươi Điều Đúng Đắn Bạn Cần Biết Ngay Bây Giờ*](https://www.vinabook.com/gia-qua-som-khon-qua-muon-ba-muoi-dieu-dung-dan-ban-can-biet-ngay-bay-gio-p19801.html)
 

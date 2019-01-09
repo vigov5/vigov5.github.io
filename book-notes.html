@@ -28,7 +28,9 @@ excerpt: "Những ghi chú ngắn và cảm nhận cho những quyển sách mì
 					<p>Themes: {% assign first = true %}{% for tag in review.tags %}{% unless first %},{% endunless %} {{ tag }}{%
 						assign first = false %}{% endfor %}</p>
 					<p>Finished: {{ review.date | date: "%B %-d, %Y" }}</p>
-					{% if review.excerpt %}<p>{{ review.excerpt }}</p>{% endif %}
+					{% if review.excerpt %}
+					<p>{{ review.excerpt }}</p>
+					{% endif %}
 					<a class="button" href="{{ review.url | prepend: site.baseurl }}">Read full notes</a>
 				</div>
 			</div>

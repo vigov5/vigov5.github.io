@@ -12,7 +12,7 @@ book-link: https://www.amazon.com/gp/product/B00XSSYR50/
 cover: when_breath_becomes_air.jpg
 format: Paperback
 date: 2018-11-18
-excerpt: "Quyển sách cảm động và hết sức chân thực về cuộc chiến của một bác sĩ với căn bệnh ung thư phổi"
+excerpt: Quyển sách cảm động và hết sức chân thực về cuộc chiến của một bác sĩ với căn bệnh ung thư phổi
 ---
 Bản dịch: [*Khi hơi thở hóa thinh không*](https://tiki.vn/khi-hoi-tho-hoa-thinh-khong-p750578.html)
 
