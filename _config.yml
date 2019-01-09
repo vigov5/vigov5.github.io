@@ -23,6 +23,10 @@ collections:
   project:
     output: true
     permalink: /project/:path/
+  book_reviews:
+    output: true
+    output_ext: .html
+    permalink: /book-notes/:path/
 
 social:
     - icon: fa-facebook
@@ -42,6 +46,8 @@ urls:
       url: /about/
     - text: My Projects
       url: /projects/
+    - text: Book Notes
+      url: /book-notes/
     - text: XML Feed
       url: /feed.xml
 
