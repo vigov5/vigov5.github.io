@@ -14,7 +14,7 @@ h3.project-headlines {
 }
 
 span.tags {
-  font-size: 10px;
+  font-size: 14px;
   border-bottom: 1px #888 dotted;
   margin: 0 5px;
 }
@@ -30,6 +30,7 @@ span.tags:last-child {
   width: 100%;
 }
 .project-footer .project-link {
+  font-size: 14px;
   display: inline-block;
   position: relative;
   float: left;
@@ -39,7 +40,7 @@ span.tags:last-child {
   display: inline-block;
   position: relative;
   float: right;
-  font-size: 13px;
+  font-size: 14px;
   font-style: italic;
 }
 .project-inner > a {
