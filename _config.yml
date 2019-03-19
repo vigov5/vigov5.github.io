@@ -48,6 +48,8 @@ urls:
       url: /projects/
     - text: Book Notes
       url: /book-notes/
+    - text: Wedding
+      url: /wedding/
     - text: XML Feed
       url: /feed.xml
 
