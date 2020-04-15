@@ -4,9 +4,8 @@ title: About
 permalink: /about/
 ---
 
-R&D Lab - Framgia Vietnam Inc.
+R&D Unit - Sun* Inc.
 
-Python + Elixir + VueJs + Haxe + Elm + Blockchain
-
+Python + Elixir + Rust + VueJS + Blockchain + CyberSec
 
 email: nguyenanhtien2210[at]gmail[dot]com
