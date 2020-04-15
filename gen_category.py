@@ -16,6 +16,15 @@ categories = [
     ("smartcontract", "Smart Contract"),
     ("phoenix", "Phoenix"),
     ("websocket", "Websocket"),
+    ("reverse-engineering", "Reverse Engineering"),
+    ("unity", "Unity"),
+    ("chatwork", "Chatwork"),
+    ("debug", "Debugging"),
+    ("sensor", "Sensor"),
+    ("tailwindcss", "Tailwind CSS"),
+    ("vuejs", "VueJS"),
+    ("iot", "Internet of Things"),
+    ("http3", "HTTP3"),
 ]
 
 template = """---
