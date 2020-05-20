@@ -1,4 +1,11 @@
-[
+[{
+		"slug": "archmagi-game",
+		"name": "Archmagi Game",
+		"image": "archmagi.gif",
+		"url": "https://archmagi.heasygame.com/",
+		"date": "Sep 2019",
+		"tags": ["Elixir", "Multiplayer", "Game"]
+	},
 	{
 		"slug": "blokus-game",
 		"name": "Blokus Game",
