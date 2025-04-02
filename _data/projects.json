@@ -1,4 +1,13 @@
-[{
+[
+	{
+		"slug": "qr4bank",
+		"name": "QRCode Generator for Banking",
+		"image": "qr4bank.gif",
+		"url": "/qr4bank",
+		"date": "Nov 2023",
+		"tags": ["ChatGPT", "AlpineJS", "Tool"]
+	},
+	{
 		"slug": "archmagi-game",
 		"name": "Archmagi Game",
 		"image": "archmagi.gif",

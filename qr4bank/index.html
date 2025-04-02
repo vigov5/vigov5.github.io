@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo mã QR chuyển khoản ngân hàng</title>
+    <!-- Include Alpine.js from a CDN -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <style>
+        .split-container {
+            display: flex;
+            flex-wrap: wrap;
+            /* Allow items to wrap onto the next line on small screens */
+            width: 66.66%;
+            margin: 0 auto;
+        }
+
+        .split {
+            flex: 1 1 50%;
+            /* Default to half width */
+            box-sizing: border-box;
+            /* Include padding and borders in the element's total width and height */
+            padding: 10px;
+        }
+
+        @media (max-width: 600px) {
+
+            /* Adjust this value based on when you want the layout to change */
+            .split {
+                flex-basis: 100%;
+                /* On small screens, take full width */
+            }
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #f8f9fa;
+            /* Light grey background */
+            border-top: 1px solid #dee2e6;
+            /* Horizontal line at the top of the footer */
+            text-align: left;
+            /* Aligns the footer content to the left */
+            padding: 10px;
+            /* Adds some spacing inside the footer */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div x-data="{
+        template: 'print',
+        bank: '',
+        accountNo: '',
+        accountName: '',
+        addInfo: '',
+        amount: '',
+        init() {
+          const urlParams = new URLSearchParams(window.location.hash.slice(1));
+          this.template = urlParams.get('t') || this.template;
+          this.bank = urlParams.get('b') || this.bank;
+          this.accountNo = urlParams.get('no') || this.accountNo;
+          this.accountName = urlParams.get('an') || this.accountName;
+          this.addInfo = urlParams.get('ai') || this.addInfo;
+          this.amount = urlParams.get('am') || this.amount;
+        },
+        updateHash() {
+          const newHash = `#t=${this.template}&b=${this.bank}&no=${this.accountNo}&an=${this.accountName}&ai=${this.addInfo}&am=${this.amount}`;
+          window.location.hash = newHash;
+        }
+      }" x-init="init()" @input="updateHash" class="split-container">
+        <div class="split">
+            <h1>Tạo mã QR chuyển khoản ngân hàng</h1>
+            <table>
+                <tr>
+                    <td><label for="template"><strong>Mẫu QR</strong></label></td>
+                    <td>
+                        <select id="template" x-model="template">
+                            <option value="print">Mã QR, các logo và đầy đủ thông tin chuyển khoản</option>
+                            <option value="compact2">Mã QR, các logo, thông tin chuyển khoản</option>
+                            <option value="compact">QR kèm logo VietQR, Napas, ngân hàng</option>
+                            <option value="qr_only">Ảnh QR đơn giản, chỉ bao gồm QR</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="bank"><strong>Ngân hàng</strong></label></td>
+                    <td>
+                        <select id="bank" x-model="bank">
+                            <option value="">Chọn ngân hàng</option>
+                            <option value="ICB">(970415) VietinBank</option>
+                            <option value="VCB">(970436) Vietcombank</option>
+                            <option value="BIDV">(970418) BIDV</option>
+                            <option value="VBA">(970405) Agribank</option>
+                            <option value="OCB">(970448) OCB</option>
+                            <option value="MB">(970422) MBBank</option>
+                            <option value="TCB">(970407) Techcombank</option>
+                            <option value="ACB">(970416) ACB</option>
+                            <option value="VPB">(970432) VPBank</option>
+                            <option value="TPB">(970423) TPBank</option>
+                            <option value="STB">(970403) Sacombank</option>
+                            <option value="HDB">(970437) HDBank</option>
+                            <option value="VCCB">(970454) VietCapitalBank</option>
+                            <option value="SCB">(970429) SCB</option>
+                            <option value="VIB">(970441) VIB</option>
+                            <option value="SHB">(970443) SHB</option>
+                            <option value="EIB">(970431) Eximbank</option>
+                            <option value="MSB">(970426) MSB</option>
+                            <option value="CAKE">(546034) CAKE</option>
+                            <option value="Ubank">(546035) Ubank</option>
+                            <option value="TIMO">(963388) Timo</option>
+                            <option value="VTLMONEY">(971005) ViettelMoney</option>
+                            <option value="VNPTMONEY">(971011) VNPTMoney</option>
+                            <option value="SGICB">(970400) SaigonBank</option>
+                            <option value="BAB">(970409) BacABank</option>
+                            <option value="PVCB">(970412) PVcomBank</option>
+                            <option value="Oceanbank">(970414) Oceanbank</option>
+                            <option value="NCB">(970419) NCB</option>
+                            <option value="SHBVN">(970424) ShinhanBank</option>
+                            <option value="ABB">(970425) ABBANK</option>
+                            <option value="VAB">(970427) VietABank</option>
+                            <option value="NAB">(970428) NamABank</option>
+                            <option value="PGB">(970430) PGBank</option>
+                            <option value="VIETBANK">(970433) VietBank</option>
+                            <option value="BVB">(970438) BaoVietBank</option>
+                            <option value="SEAB">(970440) SeABank</option>
+                            <option value="COOPBANK">(970446) COOPBANK</option>
+                            <option value="LPB">(970449) LienVietPostBank</option>
+                            <option value="KLB">(970452) KienLongBank</option>
+                            <option value="KBank">(668888) KBank</option>
+                            <option value="UOB">(970458) UnitedOverseas</option>
+                            <option value="SCVN">(970410) StandardChartered</option>
+                            <option value="PBVN">(970439) PublicBank</option>
+                            <option value="NHB HN">(801011) Nonghyup</option>
+                            <option value="IVB">(970434) IndovinaBank</option>
+                            <option value="IBK - HCM">(970456) IBKHCM</option>
+                            <option value="IBK - HN">(970455) IBKHN</option>
+                            <option value="VRB">(970421) VRB</option>
+                            <option value="WVN">(970457) Woori</option>
+                            <option value="KBHN">(970462) KookminHN</option>
+                            <option value="KBHCM">(970463) KookminHCM</option>
+                            <option value="HSBC">(458761) HSBC</option>
+                            <option value="HLBVN">(970442) HongLeong</option>
+                            <option value="GPB">(970408) GPBank</option>
+                            <option value="DOB">(970406) DongABank</option>
+                            <option value="DBS">(796500) DBSBank</option>
+                            <option value="CIMB">(422589) CIMB</option>
+                            <option value="CBB">(970444) CBBank</option>
+                            <option value="CITIBANK">(533948) Citibank</option>
+                            <option value="KEBHANAHCM">(970466) KEBHanaHCM</option>
+                            <option value="KEBHANAHN">(970467) KEBHANAHN</option>
+                            <option value="MAFC">(977777) MAFC</option>
+                            <option value="VBSP">(999888) VBSP</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="accountNo"><strong>Số tài khoản</strong></label></td>
+                    <td><input type="text" id="accountNo" x-model="accountNo" placeholder="Account Number" /></td>
+                </tr>
+                <tr>
+                    <td><label for="accountName"><strong>Tên chủ tài khoản</strong></label></td>
+                    <td><input type="text" id="accountName" x-model="accountName" placeholder="NGUYEN VAN A" /></td>
+                </tr>
+                <tr>
+                    <td><label for="addInfo"><strong>Nội dung chuyển khoản</strong></label></td>
+                    <td><input type="text" id="addInfo" maxlength="50" size="50" x-model="addInfo"
+                            placeholder="Tối đa 50 ký tự, không sử dụng ký tự đặc biệt" /></td>
+                </tr>
+                <tr>
+                    <td><label for="amount"><strong>Số tiền</strong></label></td>
+                    <td><input type="text" id="amount" x-model="amount" placeholder="Đơn vị: VND" /></td>
+                </tr>
+            </table>
+        </div>
+        <div class="split">
+            <a :href="`https://img.vietqr.io/image/${bank}-${accountNo}-${template}.png?${accountName ? '&accountName=' + accountName : ''}${amount ? '&amount=' + amount : ''}${addInfo ? '&addInfo=' + addInfo : ''}`"
+                target="_blank" rel="noopener noreferrer">
+                Mở ảnh trong tab mới
+            </a>
+            <br>
+            <img :src="`https://img.vietqr.io/image/${bank}-${accountNo}-${template}.png?${accountName ? '&accountName=' + accountName : ''}${amount ? '&amount=' + amount : ''}${addInfo ? '&addInfo=' + addInfo : ''}`"
+                :alt="bank && accountNo ? 'Đang tạo...' : 'Vui lòng chọn ngân hàng và điền số tài khoản'"
+                :class="{ 'text-red-500': !bank || !accountNo }" alt="">
+        </div>
+    </div>
+
+    <footer class="footer">
+        API by <a href="https://vietqr.io/en/danh-sach-api/link-tao-ma-nhanh/" target="_blank"
+            rel="noopener noreferrer">vietqr.io</a> | Coded by <a href="https://github.com/vigov5" target="_blank"
+            rel="noopener noreferrer">vigov5</a> and ChatGPT
+    </footer>
+</body>
+
+</html>
